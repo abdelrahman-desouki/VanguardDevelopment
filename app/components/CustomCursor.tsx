@@ -25,6 +25,14 @@ const CustomCursor = () => {
       mouseY = e.clientY - 10;
     };
 
+    const handleTouchMove = (e: TouchEvent) => {
+      if (e.touches.length > 0) {
+        const touch = e.touches[0];
+        mouseX = touch.clientX;
+        mouseY = touch.clientY - 10;
+      }
+    };
+
     const lerp = (start: number, end: number, factor: number) => {
       return start + (end - start) * factor;
     };
@@ -46,6 +54,7 @@ const CustomCursor = () => {
     animate();
 
     window.addEventListener("mousemove", handleMouseMove);
+    window.addEventListener("touchmove", handleTouchMove, { passive: true });
 
     const setupImageHover = () => {
       const images = document.querySelectorAll("img");
@@ -82,6 +91,7 @@ const CustomCursor = () => {
 
     return () => {
       window.removeEventListener("mousemove", handleMouseMove);
+      window.removeEventListener("touchmove", handleTouchMove);
       cancelAnimationFrame(animationFrameId);
       cleanup();
     };
