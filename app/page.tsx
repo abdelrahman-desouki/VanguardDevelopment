@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import { useState, useEffect } from "react";
-import Lenis from "lenis";
+import Lenis from "@studio-freight/lenis";
 
 import Navbar from "./components/Navbar";
 import LineAnimation from "./components/lineanimat";
@@ -20,8 +20,12 @@ export default function Home(): JSX.Element {
   useEffect(() => {
     const lenis = new Lenis({
       duration: 1.2,
+      smooth: true,              // ✅ Smooth scroll ON
+      smoothTouch: true,         // ✅ Enable for touch screens
+      touchMultiplier: 1.5,      // ✅ More responsive on mobile
       easing: (t: number): number => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
     });
+
     setLenisInstance(lenis);
 
     function raf(time: DOMHighResTimeStamp): void {
@@ -80,7 +84,7 @@ export default function Home(): JSX.Element {
       </div>
 
       {/* سكشن النص النهائي */}
-      <div className="relative z-20 w-full bg-gray-100 py-12 md:py-16 mt-12 px-4">
+      <div className="relative z-20 w-full bg-[#fdfcf5] py-12 md:py-16 mt-12 px-4">
         <h2 className="text-3xl md:text-4xl font-semibold text-center text-gray-800">
           Experience Urban Living in Harmony with Nature
         </h2>
