@@ -38,7 +38,7 @@ export default function Home(): JSX.Element {
   }, []);
 
   return (
-    <main className="bg-[#f8f5ed]">
+    <main className="bg-[#fdfcf5]">
       <CustomCursor />
       <Navbar />
       <LineAnimation />
