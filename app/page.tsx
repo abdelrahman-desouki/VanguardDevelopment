@@ -80,7 +80,7 @@ export default function Home(): JSX.Element {
       </div>
 
       {/* سكشن النص النهائي */}
-      <div className="relative z-20 w-full bg-gray-100 py-12 md:py-16 mt-12 px-4">
+      <div className="relative z-20 w-full bg-[#fdfcf5] py-12 md:py-16 mt-12 px-4">
         <h2 className="text-3xl md:text-4xl font-semibold text-center text-gray-800">
           Experience Urban Living in Harmony with Nature
         </h2>
