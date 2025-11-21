@@ -118,7 +118,7 @@ const Footer = () => {
           </div>
           <div className="flex flex-col sm:flex-row gap-2 sm:gap-4 text-xs sm:text-sm order-1 sm:order-2">
             <a
-              href="https://wa.me/201505374793"
+              href="https://wa.me/201501116984"
               title="المطور"
               target="_blank"
               rel="noopener noreferrer"
