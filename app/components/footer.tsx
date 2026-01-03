@@ -132,6 +132,14 @@ const Footer = () => {
                 <span className=" font-bold font-mono">&lt;/&gt;</span>
               )}
             </a>
+            {/* Desouki Link */}
+            <a
+              href="https://desouki.vercel.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gray-400 hover:text-emerald-400 transition-colors font-mono font-semibold">
+                  Desouki
+            </a>
           </div>
         </div>
       </div>
