@@ -116,31 +116,38 @@ const Footer = () => {
           <div className="text-gray-400 text-xs sm:text-sm order-2 sm:order-1">
             © 2025 Vanguard Development. All rights reserved.
           </div>
-          <div className="flex flex-col sm:flex-row gap-2 sm:gap-4 text-xs sm:text-sm order-1 sm:order-2">
-            <a
-              href="https://wa.me/201501116984"
-              title="المطور"
-              target="_blank"
-              rel="noopener noreferrer"
-              onMouseEnter={() => setHovered(true)}
-              onMouseLeave={() => setHovered(false)}
-              className="text-gray-400 hover:text-green-400 transition-colors flex items-center gap-1"
-            >
-              {hovered ? (
-                <FaWhatsapp className="w-4 h-4" />
-              ) : (
-                <span className=" font-bold font-mono">&lt;/&gt;</span>
-              )}
-            </a>
-            {/* Desouki Link */}
-            <a
-              href="https://desouki.vercel.app/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-gray-400 hover:text-emerald-400 transition-colors font-mono font-semibold">
-                  Desouki
-            </a>
-          </div>
+          <div className="flex items-center gap-3 text-xs sm:text-sm text-gray-400 order-1 sm:order-2">
+
+  {/* WhatsApp */}
+  <a
+    href="https://wa.me/201501116984"
+    target="_blank"
+    rel="noopener noreferrer"
+    title="تواصل عبر واتساب"
+    className="group flex items-center justify-center w-8 h-8 rounded-full 
+               bg-gray-800 hover:bg-green-500 transition-all duration-300
+               shadow-sm hover:shadow-green-500/40 hover:scale-110"
+  >
+    <FaWhatsapp className="w-4 h-4 text-gray-300 group-hover:text-white" />
+  </a>
+
+  {/* Divider */}
+  <span className="text-gray-600">|</span>
+
+  {/* Developer Signature */}
+  <a
+    href="https://desouki.vercel.app/"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="group flex items-center gap-1 font-mono font-semibold tracking-wide
+               hover:text-emerald-400 transition-colors duration-300"
+  >
+    <span className="text-gray-500 group-hover:text-emerald-400">&lt;/&gt;</span>
+    <span>Desouki</span>
+  </a>
+
+</div>
+
         </div>
       </div>
     </footer>
